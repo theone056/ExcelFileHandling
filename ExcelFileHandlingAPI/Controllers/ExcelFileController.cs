@@ -30,7 +30,11 @@ namespace ExcelFileHandlingAPI.Controllers
             }
 
             var stringPath = filePath(file);
-            var test = ExcelHelper.Extract<IMSModel>(stringPath);
+
+            var data = ExcelHelper.Extract<IMSModel>(stringPath);
+
+            // save to database
+
             return Ok();
         }
 

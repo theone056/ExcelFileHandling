@@ -9,12 +9,11 @@ namespace ExcelFileHandling.Core.Models
 {
     public class IMSModel
     {
-        [JsonPropertyName("Product List")]
-        public string product { get; set; }
-        public string receivedProduct { get; set; }
+        public string ProductList { get; set; }
+        public string ReceivedProducts { get; set; }
         public string Sales { get; set; }
-        public string Stock { get; set; }
-        public string Page { get; set; }
+        public string StocksInventory { get; set; }
+        public string Pages { get; set; }
         public int Views { get; set; }
     }
 }

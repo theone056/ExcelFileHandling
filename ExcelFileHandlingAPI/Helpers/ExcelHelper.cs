@@ -19,8 +19,9 @@ namespace ExcelFileHandlingAPI.Helpers
             var headerList = new Dictionary<string,int>();
             foreach(var cell in rowHeader.Cells)
             {
-                var collName = cell.StringCellValue;
-                headerList.Add(collName, cell.ColumnIndex);
+                var collNameList = cell.StringCellValue.Split(" ").Select(x => char.ToUpper(x[0]) + x.Substring(1).ToLower());
+                var colName = string.Join("", collNameList);
+                headerList.Add(colName, cell.ColumnIndex);
             }
 
             var listObject = new List<T>();
